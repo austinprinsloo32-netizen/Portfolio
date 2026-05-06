@@ -23,6 +23,7 @@
 
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
       font-family: Inter, Arial, sans-serif;
@@ -81,27 +82,26 @@
     }
 
     .brand-name {
-  font-size: 1.3rem;
-  font-family: 'Orbitron', sans-serif;
-  font-weight: 900;
-  letter-spacing: 0.04em;
+      font-size: 1.3rem;
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      background: linear-gradient(135deg, #22c55e, #60a5fa, #22c55e);
+      background-size: 200% 200%;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientShift 4s ease infinite;
+      text-shadow:
+        0 0 10px rgba(34, 197, 94, 0.4),
+        0 0 20px rgba(96, 165, 250, 0.3);
+    }
 
-  background: linear-gradient(135deg, #22c55e, #60a5fa, #22c55e);
-  background-size: 200% 200%;
-
-  /* Standard property */
-  background-clip: text;
-
-  /* WebKit support (Chrome, Edge, Safari) */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  animation: gradientShift 4s ease infinite;
-
-  text-shadow:
-    0 0 10px rgba(34, 197, 94, 0.4),
-    0 0 20px rgba(96, 165, 250, 0.3);
-}
+    .brand-name:hover {
+      text-shadow:
+        0 0 20px rgba(34, 197, 94, 0.8),
+        0 0 40px rgba(96, 165, 250, 0.6);
+    }
 
     .brand-mark {
       width: 42px;
@@ -416,6 +416,10 @@
       font-weight: 700;
     }
 
+    .project-links a:hover {
+      background: rgba(51, 65, 85, 0.95);
+    }
+
     .resume-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -491,6 +495,12 @@
       font-size: 14px;
     }
 
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
     @media (max-width: 960px) {
       .hero-grid,
       .about-grid,
@@ -529,25 +539,10 @@
       }
 
       .skills-grid { grid-template-columns: 1fr; }
-      @keyframes gradientShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-.brand-name:hover {
-  text-shadow:
-    0 0 20px rgba(34, 197, 94, 0.8),
-    0 0 40px rgba(96, 165, 250, 0.6);
-}
     }
   </style>
 </head>
+
 <body>
   <div class="glow"></div>
 
@@ -557,6 +552,7 @@
         <span class="brand-mark">⚡</span>
         <span class="brand-name">Austin Prinsloo</span>
       </a>
+
       <nav class="nav-links">
         <a href="#home">Home</a>
         <a href="#about">About</a>
@@ -571,27 +567,34 @@
     <section class="hero" id="home">
       <div class="container hero-grid">
         <div class="panel hero-copy">
-          <div class="eyebrow">Front-End Developer • Python Builder • Security-Focused Creator</div>
+          <div class="eyebrow">Front-End Developer • Python Builder • SaaS & Security-Focused Creator</div>
+
           <h1>Building useful digital tools that solve real problems.</h1>
+
           <p class="lead">
             I’m Austin Prinsloo — an entry-level developer with a blend of front-end development,
-            Python scripting, and cybersecurity fundamentals. I build practical products, not just demos.
+            Python scripting, Flask, PostgreSQL, and cybersecurity fundamentals. I build real-world
+            SaaS tools, business websites, and security-focused applications that solve practical problems.
           </p>
+
           <div class="hero-actions">
             <a class="btn btn-primary" href="#projects">View Projects</a>
             <a class="btn btn-secondary" href="#contact">Contact Me</a>
           </div>
+
           <div class="hero-stats">
             <div class="stat">
-              <strong>1 live app</strong>
+              <strong>3+ live projects</strong>
               <span>Deployed and publicly accessible</span>
             </div>
+
             <div class="stat">
-              <strong>3 focus areas</strong>
-              <span>Web, Python, and security</span>
+              <strong>4 focus areas</strong>
+              <span>Web, Python, SaaS, and security</span>
             </div>
+
             <div class="stat">
-              <strong>Real-world build</strong>
+              <strong>SaaS & client builds</strong>
               <span>Problem-solving over tutorial cloning</span>
             </div>
           </div>
@@ -601,20 +604,25 @@
           <div class="portrait">
             <div>
               <h2>Austin Prinsloo</h2>
-              <p>Front-End Developer • Python Developer • Ethical Hacking Learner • Problem Solver</p>
+              <p>Front-End Developer • Python Developer • SaaS Builder • Ethical Hacking Learner</p>
             </div>
           </div>
+
           <div class="stack-box">
             <h3>Core Stack</h3>
+
             <div class="tag-list">
               <span class="tag">HTML</span>
               <span class="tag">CSS</span>
               <span class="tag">JavaScript</span>
               <span class="tag">Python</span>
               <span class="tag">Flask</span>
+              <span class="tag">PostgreSQL</span>
               <span class="tag">GitHub</span>
+              <span class="tag">Render</span>
               <span class="tag">Kali Linux</span>
               <span class="tag">PowerShell</span>
+              <span class="tag">SaaS Development</span>
             </div>
           </div>
         </aside>
@@ -625,9 +633,7 @@
       <div class="container">
         <div class="section-heading">
           <div>
-
             <h2>About Me</h2>
-            
           </div>
         </div>
 
@@ -636,23 +642,30 @@
             <div>
               <p>
                 I’m a motivated self-taught developer transitioning into IT, web development, and cybersecurity.
-                My work blends practical front-end skills with Python scripting, automation, and security awareness.
-                I enjoy building tools that are clear, useful, and grounded in real problems people actually face.
+                My work blends practical front-end skills with Python scripting, Flask applications, database-backed
+                projects, automation, and security awareness. I enjoy building tools that are clear, useful, and
+                grounded in real problems people actually face.
               </p>
+
               <ul class="bullet-list">
                 <li><strong>Product-minded:</strong> I like building things that people can use, not just code samples.</li>
+                <li><strong>SaaS-focused:</strong> I’m learning how to build web apps with users, databases, dashboards, and cloud deployment.</li>
                 <li><strong>Security-aware:</strong> I think about trust, suspicious patterns, and real online threats.</li>
                 <li><strong>Improving fast:</strong> I’m focused on sharpening both technical skill and presentation quality.</li>
               </ul>
             </div>
+
             <div>
               <h3>Skills Snapshot</h3>
+
               <div class="skills-grid">
                 <div class="skill-box">Responsive Web Design</div>
                 <div class="skill-box">JavaScript Fundamentals</div>
                 <div class="skill-box">Python Scripting</div>
                 <div class="skill-box">Flask Apps</div>
+                <div class="skill-box">PostgreSQL</div>
                 <div class="skill-box">Git & GitHub</div>
+                <div class="skill-box">Render Deployment</div>
                 <div class="skill-box">PowerShell</div>
                 <div class="skill-box">Kali Linux Basics</div>
                 <div class="skill-box">Cybersecurity Fundamentals</div>
@@ -668,117 +681,214 @@
         <div class="section-heading">
           <div>
             <h2>Projects</h2>
-            
+            <p>Live apps, SaaS-style tools, security experiments, and real-world business websites.</p>
           </div>
         </div>
 
         <div class="projects-grid">
-          <!-- 1. SafeSignal (Featured) -->
-          <article class="panel project-card">
-            <div class="project-top">
-              <span class="project-badge">Featured</span>
-              <span class="tag">Flask + JS</span>
-            </div>
-            <h3>SafeSignal</h3>
-            <p>
-              A phishing and scam detection web app that analyzes suspicious messages and links, assigns a risk score,
-              and explains warning signals to help users avoid fraud.
-            </p>
-            <div class="tag-list">
-              <span class="tag">Risk Scoring</span>
-              <span class="tag">Scam Heuristics</span>
-              <span class="tag">Live Deployment</span>
-              <span class="tag">Security UX</span>
-            </div>
-            <div class="project-links">
-              <a href="https://safesignal-7j44.onrender.com" target="_blank" rel="noopener noreferrer">Live Demo</a>
-              <a href="https://github.com/austinprinsloo32-netizen/safesignal" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
-            </div>
-          </article>
 
-          <!-- 2. Pentesting Toolkit -->
-          <article class="panel project-card">
-            <div class="project-top">
-              <span class="project-badge">Security</span>
-              <span class="tag">Python/Bash</span>
-            </div>
-            <h3>Pentesting Toolkit & Experiments</h3>
-            <p>
-              A collection of Python and Bash-based penetration testing scripts focused on scanning, enumeration,
-              and automation of basic security testing workflows.
-            </p>
-            <div class="tag-list">
-              <span class="tag">Pentesting</span>
-              <span class="tag">Automation</span>
-              <span class="tag">Kali Linux</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/Auzzy101/pentest-projects" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
-            </div>
-          </article>
+          <!-- AutoClient -->
+<article class="panel project-card">
+  <div class="project-top">
+    <span class="project-badge">SaaS</span>
+    <span class="tag">Flask + PostgreSQL</span>
+  </div>
 
-          <!-- 3. OSINT Tool -->
-          <article class="panel project-card">
-            <div class="project-top">
-              <span class="project-badge">Investigation</span>
-              <span class="tag">Python</span>
-            </div>
-            <h3>Prinsloo OSINT Tool</h3>
-            <p>
-              A GUI-based OSINT tool designed to gather and organize publicly available information for research
-              and investigative purposes.
-            </p>
-            <div class="tag-list">
-              <span class="tag">OSINT</span>
-              <span class="tag">Python</span>
-              <span class="tag">Data Gathering</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/Auzzy101/Prinsloo_osint_tool" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
-            </div>
-          </article>
+  <h3>AutoClient</h3>
 
-          <!-- 4. System Utility Toolkit -->
-          <article class="panel project-card">
-            <div class="project-top">
-              <span class="project-badge">Automation</span>
-              <span class="tag">PowerShell</span>
-            </div>
-            <h3>System Utility Toolkit</h3>
-            <p>
-              A PowerShell-based toolkit for system maintenance, troubleshooting, and automation of common
-              Windows tasks.
-            </p>
-            <div class="tag-list">
-              <span class="tag">PowerShell</span>
-              <span class="tag">Windows</span>
-              <span class="tag">Automation</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/Auzzy101/SystemUtilityToolkit" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
-            </div>
-          </article>
+  <p>
+    An AI-powered lead management SaaS platform designed to help businesses track leads,
+    manage outreach, automate follow-ups, and streamline client communication through
+    WhatsApp and LinkedIn workflows.
+  </p>
 
-          <!-- 5. Client Websites -->
+  <div class="tag-list">
+    <span class="tag">Lead Tracking</span>
+    <span class="tag">PostgreSQL</span>
+    <span class="tag">Follow-Up System</span>
+    <span class="tag">WhatsApp Outreach</span>
+    <span class="tag">LinkedIn Outreach</span>
+    <span class="tag">Render Deployment</span>
+  </div>
+
+  <div class="project-links">
+    <a href="https://autoclient-cim7.onrender.com" target="_blank">Live App</a>
+
+    <a href="https://austinprinsloo32-netizen.github.io/AutoClient/" target="_blank">
+      Frontend
+    </a>
+
+    <a href="https://github.com/austinprinsloo32-netizen/AutoClient" target="_blank">
+      GitHub Repo
+    </a>
+  </div>
+</article>
+
+          <!-- SafeSignal -->
+<article class="panel project-card">
+  <div class="project-top">
+    <span class="project-badge">Featured</span>
+    <span class="tag">Flask + JS</span>
+  </div>
+
+  <h3>SafeSignal</h3>
+
+  <p>
+    A phishing and scam detection web app that analyzes suspicious messages,
+    emails, links, and screenshots, assigns a risk score, and explains scam indicators.
+  </p>
+
+  <div class="tag-list">
+    <span class="tag">Risk Scoring</span>
+    <span class="tag">Screenshot Scanner</span>
+    <span class="tag">Security UX</span>
+  </div>
+
+  <div class="project-links">
+    <a href="https://safesignal-7j44.onrender.com" target="_blank">
+      Live App
+    </a>
+
+    <a href="https://github.com/austinprinsloo32-netizen/safesignal" target="_blank">
+      GitHub Repo
+    </a>
+  </div>
+</article>
+
+          <!-- Matt Money -->
+<article class="panel project-card">
+  <div class="project-top">
+    <span class="project-badge">Business Website</span>
+    <span class="tag">Frontend</span>
+  </div>
+
+  <h3>MattMoney Website</h3>
+
+  <p>
+    A modern responsive business website focused on branding,
+    layout structure, and mobile-friendly design.
+  </p>
+
+  <div class="tag-list">
+    <span class="tag">Responsive Design</span>
+    <span class="tag">UI/UX</span>
+    <span class="tag">HTML</span>
+    <span class="tag">CSS</span>
+    <span class="tag">JavaScript</span>
+  </div>
+
+  <div class="project-links">
+    <a href="https://austinprinsloo32-netizen.github.io/mattmoney-website/" target="_blank">
+      Live Site
+    </a>
+  </div>
+</article>
+
+          <!-- 4. Client Websites -->
           <article class="panel project-card">
             <div class="project-top">
               <span class="project-badge">Web Design</span>
               <span class="tag">Frontend</span>
             </div>
+
             <h3>Client Websites</h3>
+
             <p>
-              Responsive business websites built for real-world use, focusing on layout, branding, and user experience.
+              Responsive business websites built for real-world use, focusing on layout,
+              branding, clear calls-to-action, and user experience.
             </p>
+
             <div class="tag-list">
               <span class="tag">HTML</span>
               <span class="tag">CSS</span>
               <span class="tag">JavaScript</span>
+              <span class="tag">Business Websites</span>
             </div>
+
             <div class="project-links">
               <a href="https://auzzy101.github.io/BaySnoekMan-Site2/" target="_blank" rel="noopener noreferrer">Bay Snoek Man</a>
               <a href="https://auzzy101.github.io/A-J-Marketing/" target="_blank" rel="noopener noreferrer">A & J Marketing</a>
             </div>
           </article>
+
+          <!-- 5. Pentesting Toolkit -->
+          <article class="panel project-card">
+            <div class="project-top">
+              <span class="project-badge">Security</span>
+              <span class="tag">Python/Bash</span>
+            </div>
+
+            <h3>Pentesting Toolkit & Experiments</h3>
+
+            <p>
+              A collection of Python and Bash-based penetration testing scripts focused on scanning,
+              enumeration, and automation of basic security testing workflows.
+            </p>
+
+            <div class="tag-list">
+              <span class="tag">Pentesting</span>
+              <span class="tag">Automation</span>
+              <span class="tag">Kali Linux</span>
+              <span class="tag">Security Testing</span>
+            </div>
+
+            <div class="project-links">
+              <a href="https://github.com/Auzzy101/pentest-projects" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+            </div>
+          </article>
+
+          <!-- 6. OSINT Tool -->
+          <article class="panel project-card">
+            <div class="project-top">
+              <span class="project-badge">Investigation</span>
+              <span class="tag">Python</span>
+            </div>
+
+            <h3>Prinsloo OSINT Tool</h3>
+
+            <p>
+              A GUI-based OSINT tool designed to gather and organize publicly available information
+              for research and investigative purposes.
+            </p>
+
+            <div class="tag-list">
+              <span class="tag">OSINT</span>
+              <span class="tag">Python</span>
+              <span class="tag">Data Gathering</span>
+              <span class="tag">Research Tool</span>
+            </div>
+
+            <div class="project-links">
+              <a href="https://github.com/Auzzy101/Prinsloo_osint_tool" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+            </div>
+          </article>
+
+          <!-- 7. System Utility Toolkit -->
+          <article class="panel project-card">
+            <div class="project-top">
+              <span class="project-badge">Automation</span>
+              <span class="tag">PowerShell</span>
+            </div>
+
+            <h3>System Utility Toolkit</h3>
+
+            <p>
+              A PowerShell-based toolkit for system maintenance, troubleshooting,
+              and automation of common Windows tasks.
+            </p>
+
+            <div class="tag-list">
+              <span class="tag">PowerShell</span>
+              <span class="tag">Windows</span>
+              <span class="tag">Automation</span>
+              <span class="tag">Troubleshooting</span>
+            </div>
+
+            <div class="project-links">
+              <a href="https://github.com/Auzzy101/SystemUtilityToolkit" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
@@ -788,38 +898,53 @@
         <div class="section-heading">
           <div>
             <h2>Resume Highlights</h2>
-            
           </div>
         </div>
 
         <div class="resume-grid">
           <div class="panel resume-card">
             <h3>Experience</h3>
+
             <div class="timeline">
               <div class="timeline-item">
                 <strong>Remote Marketing & Lead Generation</strong>
                 <span>Affinity Business Network</span>
                 <p>Worked on outreach, communication, and online business support in a remote role.</p>
               </div>
+
               <div class="timeline-item">
                 <strong>Machine Operator / Production Background</strong>
                 <span>Manufacturing & Operations</span>
                 <p>Brought discipline, process awareness, quality control, and technical responsibility into a tech transition.</p>
+              </div>
+
+              <div class="timeline-item">
+                <strong>Independent Developer Projects</strong>
+                <span>SafeSignal, AutoClient, client websites, and automation tools</span>
+                <p>Built and deployed real-world projects using front-end technologies, Flask, PostgreSQL, GitHub, and Render.</p>
               </div>
             </div>
           </div>
 
           <div class="panel resume-card">
             <h3>Certifications & Learning</h3>
+
             <div class="timeline">
               <div class="timeline-item">
                 <strong>Responsive Web Design</strong>
                 <span>FreeCodeCamp</span>
               </div>
+
               <div class="timeline-item">
                 <strong>Python & Web Development Courses</strong>
                 <span>Sololearn / Self-study</span>
               </div>
+
+              <div class="timeline-item">
+                <strong>JavaScript Algorithms & Data Structures</strong>
+                <span>FreeCodeCamp / Ongoing learning</span>
+              </div>
+
               <div class="timeline-item">
                 <strong>Cybersecurity Foundations</strong>
                 <span>Kali Linux, scanning, basic pentest workflow</span>
@@ -835,9 +960,12 @@
         <div class="panel contact-card">
           <div>
             <h2>Let’s Build Something Useful</h2>
+
             <p>
-              I’m open to junior developer, IT support, and security-focused opportunities, as well as freelance website and tool-building work.
+              I’m open to junior developer, IT support, security-focused opportunities,
+              SaaS projects, and freelance website or tool-building work.
             </p>
+
             <div class="contact-list">
               <a href="mailto:Austinprinsloo32@gmail.com">Austinprinsloo32@gmail.com</a>
               <a href="https://github.com/austinprinsloo32-netizen" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
@@ -846,17 +974,21 @@
               <span>Cell &amp; WhatsApp: 0689107419</span>
             </div>
           </div>
+
           <div>
             <h2>Best fit roles</h2>
+
             <div class="tag-list">
               <span class="tag">Junior Front-End Developer</span>
               <span class="tag">Python Developer</span>
+              <span class="tag">Flask Developer</span>
               <span class="tag">IT Support</span>
               <span class="tag">Security Trainee</span>
               <span class="tag">Freelance Web Work</span>
+              <span class="tag">SaaS Builder</span>
             </div>
-            <p class="contact-note">
-            </p>
+
+            <p class="contact-note"></p>
           </div>
         </div>
       </div>
@@ -864,7 +996,7 @@
   </main>
 
   <footer>
-    © 2026 Austin Prinsloo — rebuilt stronger.
+    © 2026 Austin Prinsloo — building real-world digital products.
   </footer>
 </body>
 </html>
